@@ -1,0 +1,108 @@
+/* help-button.css - Extracted styles for help button and animation */
+
+.help-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 100;
+}
+
+.particle-container {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, rgba(0, 161, 255, 0.8) 0%, rgba(0, 98, 179, 0) 70%);
+  opacity: 0;
+  animation: particle-animation 3s ease-in-out infinite;
+}
+
+@keyframes particle-animation {
+  0% {
+    transform: translate(0, 0) scale(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(var(--tx), var(--ty)) scale(var(--scale));
+    opacity: 0;
+  }
+}
+
+#help-toggle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0062b3 0%, #00a1ff 100%);
+  color: white;
+  border: none;
+  box-shadow: 0 5px 25px rgba(0, 122, 204, 0.6);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 38px;
+  font-weight: bold;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+  position: relative;
+  backdrop-filter: blur(5px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  animation: pulse-shadow 3s infinite;
+}
+
+#help-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 30px rgba(0, 122, 204, 0.8);
+}
+
+#help-toggle.pulse-animation {
+  animation: pulse-click 0.5s ease-out;
+}
+
+@keyframes pulse-click {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 5px 25px rgba(0, 122, 204, 0.6);
+  }
+  50% {
+    transform: scale(1.2);
+    box-shadow: 0 10px 40px rgba(0, 122, 204, 0.9);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 5px 25px rgba(0, 122, 204, 0.6);
+  }
+}
+
+@keyframes pulse-shadow {
+  0% {
+    box-shadow: 0 5px 25px rgba(0, 122, 204, 0.6);
+  }
+  50% {
+    box-shadow: 0 5px 30px rgba(0, 122, 204, 0.8);
+  }
+  100% {
+    box-shadow: 0 5px 25px rgba(0, 122, 204, 0.6);
+  }
+}
+
+#help-toggle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 35px rgba(0, 122, 204, 0.8);
+}

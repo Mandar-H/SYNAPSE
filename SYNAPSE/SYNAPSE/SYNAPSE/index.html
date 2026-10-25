@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Synapse — Smart Yielding Network for Automated Processing, Summarization & Extraction</title>
+    <meta name="description" content="Synapse helps you process, summarize, and extract insights from documents with modern, fast AI tools.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" href="assets/img/logo.svg">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#">
+          <img class="brand-mark" src="assets/img/logo.svg" alt="Synapse logo">
+          <span class="brand-name">S.Y.N.A.P.S.E</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+          </button>
+          <ul id="nav-menu" class="nav-menu">
+            <li><a href="#tools">Tools</a></li>
+            <li><a href="#how-it-works">How it works</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#docs">Docs</a></li>
+          </ul>
+        </nav>
+        <div class="header-cta">
+          <button id="theme-toggle" class="btn btn-ghost" type="button" aria-label="Toggle theme">Theme</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <h1 class="hero-title">S.Y.N.A.P.S.E</h1>
+           
+            <p class="hero-lead">Fast, secure, and delightful AI tools to handle your documents: summarize, extract, classify, translate, transcribe, redact, and more.</p>
+            <div class="hero-actions">
+              <a class="btn btn-ghost btn-lg" href="#tools">Explore tools</a>
+            </div>
+            <div class="hero-trust">
+              <span class="trust-badge">Runs in your browser</span>
+              <span class="dot">•</span>
+              <span class="trust-badge">Privacy-first</span>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
+      <section id="docs" class="cta">
+        <div class="container cta-inner">
+          <h2>Build on Synapse</h2>
+          <p>Drag and drop documents to start processing instantly.</p>
+          <div id="dropzone" class="dropzone" tabindex="0" role="button" aria-label="Drag and drop files here or click to upload">
+            <span>Drop files here or click to upload</span>
+            <input id="file-input" type="file" multiple hidden>
+          </div>
+          <div id="dropzone-list" class="dropzone-list" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section id="tools" class="tools">
+        <div class="container">
+          <h2 class="section-title">Popular tools</h2>
+          <div class="tools-grid">
+            <a class="tool-card" href="#summarize">
+              <div class="tool-icon">📝</div>
+              <div class="tool-info">
+                <h3>Summarize</h3>
+                <p>Compress long documents into crisp, accurate summaries.</p>
+              </div>
+            </a>
+            <a class="tool-card" href="#extract">
+              <div class="tool-icon">📑</div>
+              <div class="tool-info">
+                <h3>Extract</h3>
+                <p>Pull key fields, entities, and tables from PDFs and images.</p>
+              </div>
+            </a>
+            <a class="tool-card" href="#redact">
+              <div class="tool-icon">🕶️</div>
+              <div class="tool-info">
+                <h3>Redact</h3>
+                <p>Remove PII with smart detection and review.</p>
+              </div>
+            </a>
+            <a class="tool-card" href="#compress">
+              <div class="tool-icon">🗜️</div>
+              <div class="tool-info">
+                <h3>Compress</h3>
+                <p>Shrink PDFs for fast sharing without quality loss.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="how-it-works" class="how">
+        <div class="container how-grid">
+          <div class="how-item">
+            <h3>1. Drop your files</h3>
+            <p>Drag and drop PDFs, images, audio, or text. Your data stays private.</p>
+          </div>
+          <div class="how-item">
+            <h3>2. Pick a tool</h3>
+            <p>Choose from a catalog of powerful tools designed for common tasks.</p>
+          </div>
+          <div class="how-item">
+            <h3>3. Get instant results</h3>
+            <p>Process in seconds. Download or continue in a workflow.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing" class="pricing">
+        <div class="container pricing-inner">
+          <h2 class="section-title">Simple pricing</h2>
+          <div class="pricing-card">
+            <div class="price">
+              <span class="amount">Free</span>
+              <span class="note"> • Unlimited small files</span>
+            </div>
+            <ul class="benefits">
+              <li>All tools included</li>
+              <li>Privacy-first processing</li>
+              <li>Email support</li>
+            </ul>
+            <a class="btn btn-primary btn-lg" href="signup.html">Start now</a>
+          </div>
+        </div>
+      </section>
+
+      
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <img class="brand-mark" src="assets/img/logo.svg" alt="Synapse logo small">
+          <span class="brand-name">S.Y.N.A.P.S.E</span>
+        </div>
+        <ul class="footer-links">
+          <li><a href="#privacy">Privacy</a></li>
+          <li><a href="#terms">Terms</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <p class="copyright">© <span id="year"></span> Synapse. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+     <div id="help-modal" class="chat-popup">
+    <div class="chat-popup-content">
+      <div class="chat-header">
+        <h3>Synapse Assistant</h3>
+        <button class="help-modal-close" aria-label="Close chat">&times;</button>
+      </div>
+      <div class="chat-messages" id="chat-messages">
+        <div class="message bot">
+          <div class="message-content">Hi there! I'm your Synapse assistant. How can I help you today?</div>
+        </div>
+      </div>
+      <div class="chat-input-container">
+        <textarea id="help-question" placeholder="Type your message here..." class="chat-input"></textarea>
+        <button id="help-submit" class="chat-send-btn" aria-label="Send message">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22 2L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  </body>
+  </html>
+
+
+

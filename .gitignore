@@ -1,0 +1,27 @@
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+
+# Local environments, dependencies, and generated files
+**/node_modules/
+**/venv/
+**/__pycache__/
+**/build/
+**/dist/
+**/uploads/
+**/.pytest_cache/
+**/coverage/
+*.py[cod]
+*.log
+SYNAPSE/login/
+summarize/API_OUTPUT_RESULTS.md

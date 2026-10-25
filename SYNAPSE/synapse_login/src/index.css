@@ -1,0 +1,174 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  color: #e6e8ee;
+  background: linear-gradient(180deg, #0b1428 0%, #0a0f1f 100%);
+}
+
+.page {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.bg {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.bg canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg canvas { display: none; }
+}
+
+.glass {
+  width: 100%;
+  max-width: 440px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 16px;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+  padding: 28px;
+  position: relative;
+  z-index: 1;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.brand-logo {
+  width: 28px;
+  height: 28px;
+  background: conic-gradient(from 180deg at 50% 50%, #7c3aed, #3a81f6, #22d3ee);
+  border-radius: 6px;
+  transform: rotate(15deg);
+}
+
+.title {
+  text-align: center;
+  margin: 0 0 4px 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.subtitle {
+  text-align: center;
+  margin: 0 0 20px 0;
+  font-size: 14px;
+  color: #a9afc3;
+}
+
+.button {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform .04s ease, box-shadow .2s ease, background-color .2s ease, border-color .2s ease;
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+.btn-google {
+  background: #1a73e8;
+  color: white;
+  box-shadow: 0 6px 20px rgba(26,115,232,.35);
+}
+
+.btn-google:hover { background: #1b66c9; }
+
+.btn-github {
+  margin-top: 12px;
+  background: #0d1117;
+  color: #f0f6fc;
+  border-color: rgba(240,246,252,.16);
+  box-shadow: 0 6px 20px rgba(0,0,0,.4);
+}
+
+.btn-github:hover { background: #161b22; }
+
+.btn-secondary {
+  margin-top: 12px;
+  background: rgba(255,255,255,.06);
+  color: #e6e8ee;
+  border-color: rgba(255,255,255,.12);
+}
+
+.divider {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 12px;
+  margin: 16px 0 10px;
+  color: #94a0be;
+  font-size: 12px;
+}
+
+.divider:before, .divider:after {
+  content: '';
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.18), transparent);
+}
+
+.form {
+  display: grid;
+  gap: 12px;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.06);
+  color: #e6e8ee;
+  border: 1px solid rgba(255,255,255,.12);
+  outline: none;
+}
+
+.input::placeholder { color: #9aa3bd; }
+
+.helper {
+  margin: 10px 0 0 0;
+  text-align: center;
+  color: #9aa3bd;
+  font-size: 12px;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 16px;
+  color: #8c95b2;
+  font-size: 12px;
+}
+
+.link { color: #a5b4fc; text-decoration: none; }
+.link:hover { text-decoration: underline; }
+
+

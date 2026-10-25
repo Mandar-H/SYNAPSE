@@ -1,0 +1,23 @@
+{
+  "name": "synapse-full-stack",
+  "version": "1.0.0",
+  "description": "Synapse - Complete document upload and summarization application",
+  "main": "start.js",
+  "scripts": {
+    "start": "node start.js",
+    "start:backend": "cd summarize && venv\\Scripts\\activate && python main.py",
+    "start:frontend": "cd SYNAPSE && npm start",
+    "install:all": "cd summarize && pip install -r requirements.txt && cd ../SYNAPSE && npm install"
+  },
+  "keywords": [
+    "document",
+    "summarization",
+    "nlp",
+    "mongodb",
+    "react",
+    "fastapi"
+  ],
+  "author": "",
+  "license": "ISC"
+}
+

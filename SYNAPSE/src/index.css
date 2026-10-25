@@ -1,0 +1,277 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* App Container */
+.app {
+  min-height: 100vh;
+  position: relative;
+  color: #d4d4d4;
+  background: #1e1e1e;
+  transition: all 0.3s ease;
+}
+
+.app.theme-light {
+  color: #101217;
+  background: #f7f9fb;
+}
+
+/* Utility Classes */
+.container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn:focus-visible {
+  outline: 2px solid rgba(0, 122, 204, 0.35);
+  outline-offset: 2px;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: #d4d4d4;
+  border-color: #2f2f2f;
+}
+
+.btn-ghost:hover {
+  border-color: #d4d4d4;
+  box-shadow: 0 6px 14px rgba(0,0,0,.12);
+}
+
+.btn-primary {
+  background: #007acc;
+  color: white;
+  box-shadow: 0 8px 16px rgba(0, 122, 204, 0.35);
+}
+
+.btn-primary:hover {
+  background: #0062b3;
+  box-shadow: 0 10px 18px rgba(0, 122, 204, 0.35);
+}
+
+.btn-lg {
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-size: 16px;
+}
+
+/* Light theme button overrides */
+.app.theme-light .btn-ghost {
+  color: #101217;
+  border-color: #e5e8ef;
+}
+
+.app.theme-light .btn-ghost:hover {
+  border-color: #101217;
+  box-shadow: 0 6px 14px rgba(16,24,40,.08);
+}
+
+.app.theme-light .btn-primary {
+  background: #18a058;
+  box-shadow: 0 8px 16px rgba(24, 160, 88, 0.25);
+}
+
+.app.theme-light .btn-primary:hover {
+  background: #15864a;
+  box-shadow: 0 10px 18px rgba(24, 160, 88, 0.25);
+}
+
+/* Responsive Design */
+@media (max-width: 960px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 720px) {
+  .container {
+    padding: 0 12px;
+  }
+  
+  .btn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+  
+  .btn-lg {
+    padding: 10px 16px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 420px) {
+  .container {
+    padding: 0 8px;
+  }
+}
+
+/* Animation utilities */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2f2f2f;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f3f;
+}
+
+.app.theme-light ::-webkit-scrollbar-track {
+  background: #f7f9fb;
+}
+
+.app.theme-light ::-webkit-scrollbar-thumb {
+  background: #e5e8ef;
+}
+
+.app.theme-light ::-webkit-scrollbar-thumb:hover {
+  background: #cfd6e5;
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid rgba(0, 122, 204, 0.35);
+  outline-offset: 2px;
+}
+
+.app.theme-light *:focus-visible {
+  outline: 2px solid rgba(24, 160, 88, 0.35);
+}
+
+/* Selection styles */
+::selection {
+  background: rgba(0, 122, 204, 0.2);
+  color: #d4d4d4;
+}
+
+.app.theme-light ::selection {
+  background: rgba(24, 160, 88, 0.2);
+  color: #101217;
+}
+
+/* Loading animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-spinner {
+  animation: spin 1s linear infinite;
+}
+
+/* Smooth transitions for theme changes */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Print styles */
+@media print {
+  * {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+  }
+}
